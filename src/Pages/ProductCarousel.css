@@ -16,7 +16,7 @@ body {
     align-items: center;
 }
 .neon-title {
-    font-size: 30px;
+    font-size: 3rem;
     margin-top:100px;
     color: #00ffcc;
     position:center;
@@ -24,15 +24,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom:2px;
-    /* Neon effect */
-    text-shadow: 
-        0 0 5px #00ffcc,
-        0 0 10px #00ffcc,
-        0 0 20px #00ffcc,
-        0 0 40px #00ffcc,
-        0 0 80px #00b3b3,
-        0 0 90px #00b3b3,
-        0 0 100px #00b3b3;
+    text-shadow: 0 0 4px #00ffcc, 0 0 8px #00ffcc; /* Reduced neon text glow */
+  
 }
 #spinner {
     transform-style: preserve-3d;
@@ -50,7 +43,7 @@ body {
     box-shadow: 0 0 20px 10px rgba(0, 174, 255, 0.8); /* Neon blue light effect */
     border-radius: 10px; /* Optional: round the edges */
     position: absolute;
-    top:10%;
+    top:0%;
     left: 50%;
     transform-origin: 50% 50% -400px; /* Adjust the transform origin */
     transform: translate(-50%, -50%);
@@ -85,11 +78,13 @@ body {
 /* Media Query for Phone View */
 @media (max-width: 600px) {
     #carousel {
+        margin-top: 120px;
         padding-top: 5%;
         margin-bottom: 2rem;
     }
 
     #spinner {
+        margin-top:20px;
         height: 200px; /* Adjust the height for smaller screens */
         transform-origin: 50% 50% -300px; /* Adjust transform origin for smaller screens */
     }
@@ -103,5 +98,16 @@ body {
     .ss-icon {
         font-size: 1.5rem; /* Adjust icon size for mobile */
         margin-top: -4rem;
+    }
+}
+@media (max-width: 768px) {
+    .neon-title {
+        font-size: 1.2rem !important; /* Adjust size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .neon-title {
+        font-size: 1rem !important; /* Further adjust size for very small screens */
     }
 }

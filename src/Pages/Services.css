@@ -1,0 +1,84 @@
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 50px;
+    background-color: #000; /* Black background for neon theme */
+  }
+  
+  .neon-title {
+    font-size: 3rem;
+    margin-top: 5px;
+    color: #00ffcc;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 2px;
+    text-shadow: 0 0 4px #00ffcc, 0 0 8px #00ffcc; 
+  }
+  
+  .service-card {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    background-color: #111; /* Dark background for cards */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Subtle neon glow */
+    position: relative; /* Allow absolute positioning of the bottom image */
+    overflow: hidden; /* Ensure no overflow from content */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 25%; /* Set height for the images */
+    object-fit: cover; /* Cover the area without distortion */
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Reduced space below the image */
+  }
+  
+  /* Neon outlines and box shadow for cards */
+  .card1 {
+    border: 2px solid #00ffcc; /* Neon cyan outline */
+    box-shadow: 0 0 15px #00ffcc;
+  }
+  
+  .card2 {
+    border: 2px solid #ff00ff; /* Neon pink outline */
+    box-shadow: 0 0 15px #ff00ff;
+  }
+  
+  .card3 {
+    border: 2px solid #00ff00; /* Neon green outline */
+    box-shadow: 0 0 15px #00ff00;
+  }
+  
+  .service-card h2 {
+    font-size: 2rem;
+    margin: 10px 0; /* Adjusted margin to control space above and below heading */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Slight glow for headings */
+  }
+  
+  .service-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0; /* Remove any margin to avoid spacing below the paragraph */
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .service-card {
+      margin: 20px 0;
+    }
+  
+    .card-image {
+      height: auto; /* Allow height to adjust for mobile */
+      margin-bottom: 10px; /* Reduced spacing for mobile */
+    }
+  }
+  

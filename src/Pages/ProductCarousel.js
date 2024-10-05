@@ -32,7 +32,7 @@ const ProductCarousel = () => {
 
   return (
     <div>
-    <h1 className="neon-title">GIFT WONDERS</h1>
+     <h1 className="neon-title">Welcome</h1>
     <div id="carousel">
       <figure id="spinner" style={{ transform: `rotateY(${angle}deg)` }}>
         {products.map((product) => (
@@ -40,6 +40,8 @@ const ProductCarousel = () => {
         ))}
       </figure>
     </div>
+  
+    <h1 className="neon-title">Innovate, Create, Inspire: Transforming Ideas into Reality with 3D Printing.</h1>
     </div>
   );
 };
