@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #100000; /* Keeping the background consistent */
+}
+
+#carousel {
+    perspective: 1200px;
+    background: #100000;
+    padding-top: 10%;
+    font-size: 0;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.neon-title {
+    font-size: 30px;
+    margin-top:100px;
+    color: #00ffcc;
+    position:center;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom:2px;
+    /* Neon effect */
+    text-shadow: 
+        0 0 5px #00ffcc,
+        0 0 10px #00ffcc,
+        0 0 20px #00ffcc,
+        0 0 40px #00ffcc,
+        0 0 80px #00b3b3,
+        0 0 90px #00b3b3,
+        0 0 100px #00b3b3;
+}
+#spinner {
+    transform-style: preserve-3d;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    transform-origin: 50% 50% -400px; /* Adjust the origin depth */
+    transition: transform 1s ease;
+}
+
+#spinner img {
+    width: 200px; /* Set image width */
+    height: 200px; /* Set image height */
+    border: 2px solid neonblue; /* Neon blue border */
+    box-shadow: 0 0 20px 10px rgba(0, 174, 255, 0.8); /* Neon blue light effect */
+    border-radius: 10px; /* Optional: round the edges */
+    position: absolute;
+    top:10%;
+    left: 50%;
+    transform-origin: 50% 50% -400px; /* Adjust the transform origin */
+    transform: translate(-50%, -50%);
+    outline: 1px solid transparent;
+}
+
+#spinner img:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
+#spinner img:nth-child(2) { transform: rotateY(-45deg) translateZ(400px); }
+#spinner img:nth-child(3) { transform: rotateY(-90deg) translateZ(400px); }
+#spinner img:nth-child(4) { transform: rotateY(-135deg) translateZ(400px); }
+#spinner img:nth-child(5) { transform: rotateY(-180deg) translateZ(400px); }
+#spinner img:nth-child(6) { transform: rotateY(-225deg) translateZ(400px); }
+#spinner img:nth-child(7) { transform: rotateY(-270deg) translateZ(400px); }
+#spinner img:nth-child(8) { transform: rotateY(-315deg) translateZ(400px); }
+
+.ss-icon {
+    color: #fff;
+    margin: 5%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.6s color;
+    position: relative;
+    margin-top: -6rem;
+    cursor: pointer;
+}
+
+.ss-icon:hover {
+    color: #888;
+}
+
+/* Media Query for Phone View */
+@media (max-width: 600px) {
+    #carousel {
+        padding-top: 5%;
+        margin-bottom: 2rem;
+    }
+
+    #spinner {
+        height: 200px; /* Adjust the height for smaller screens */
+        transform-origin: 50% 50% -300px; /* Adjust transform origin for smaller screens */
+    }
+
+    #spinner img {
+        width: 120px; /* Reduce image size for phones */
+        height: 120px;
+        transform-origin: 50% 50% -300px; /* Adjust transform origin for smaller images */
+    }
+
+    .ss-icon {
+        font-size: 1.5rem; /* Adjust icon size for mobile */
+        margin-top: -4rem;
+    }
+}

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000; /* Dark background for contrast */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e; /* Unique dark grey color for the navbar */
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Shadow for navbar */
+    border: 2px solid #00ffcc; /* Neon cyan outline for the navbar */
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    margin-bottom: 0; /* Ensure no margin below the navbar */
+   
+ 
+    
+}
+
+.content-container {
+    margin-top: 60px; /* Adjust based on the height of your navbar */
+  }
+
+.logo {
+    color: #00ffcc; /* Neon cyan for the logo */
+    font-size: 2rem;
+    margin-left: 1rem;
+    text-shadow: 
+      0px 0px 8px #00ffcc,
+      0px 0px 20px #00ffcc,
+      0px 0px 30px #00ffcc;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+    align-items: right;
+   justify-content: right; /* Center the buttons */
+    flex-grow: 1;
+}
+
+.menu li {
+    margin-right: 2rem;
+}
+
+/* Update the button colors to make them more visually appealing */
+.menu li:nth-child(4) a,
+.menu li:nth-child(5) a {
+    background-color: #ff007f; /* Neon pink background for the buttons */
+    color: #fff; /* White text for contrast */
+    padding: 0.5rem 1.5rem; /* Increase padding for a button feel */
+    border-radius: 25px; /* Rounded corners */
+    border: 2px solid #00ffcc; /* Neon cyan border */
+    box-shadow: 
+      0px 0px 10px #00ffcc,
+      0px 0px 20px #00ffcc; /* Glow for button */
+    text-shadow: none; /* Remove text glow inside buttons */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu li:nth-child(4):hover a,
+.menu li:nth-child(5):hover a {
+    background-color: #00ffcc; /* Change to neon cyan on hover */
+    color: #000; /* Black text on hover */
+    transform: translateY(-3px); /* Slight hover lift */
+}
+
+.menu a {
+    color: #13f5ea; /* Neon magenta for regular menu items */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-shadow: 
+      0px 0px 8px #2ed6f3,
+      0px 0px 20px #ff00ff,
+      0px 0px 30px #ff00ff; /* Neon glow */
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 10;
+        padding: 1rem;
+    }
+
+    .menu.open {
+        display: flex; /* Show menu when open */
+    }
+
+    .menu li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        color: #ff00ff; /* Neon magenta */
+        font-size: 2rem;
+        margin-right: 1rem;
+        text-shadow: 
+          0px 0px 8px #ff00ff,
+          0px 0px 20px #ff00ff,
+          0px 0px 30px #ff00ff;
+    }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        color: #00ffcc; /* Neon cyan in mobile view */
+        text-shadow: 
+          0px 0px 8px #00ffcc,
+          0px 0px 20px #00ffcc,
+          0px 0px 30px #00ffcc;
+    }
+
+    .menu a:hover {
+        color: #ff00ff; /* Neon magenta on hover */
+        text-shadow: 
+          0px 0px 10px #ff00ff,
+          0px 0px 20px #ff00ff,
+          0px 0px 40px #ff00ff;
+    }
+}
