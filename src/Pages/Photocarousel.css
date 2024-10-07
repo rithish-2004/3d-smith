@@ -1,0 +1,55 @@
+.html{
+  overflow: hidden;
+}
+.photo-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Take up the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Scale down inactive items */
+  border: 5px solid rgba(0, 255, 255, 0.3); /* Neon border for inactive items */
+  border-radius: 10px;
+  width: 80vw; /* Take up 80% of the viewport width */
+  height: 80vh; /* Take up 80% of the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+  border-radius: 10px;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Scale up active item */
+  border-color: rgba(0, 255, 255, 1); /* Bright neon border for active item */
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 100vw; /* Full width on smaller screens */
+    height: 100vh; /* Full height on smaller screens */
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Adjust for smaller screens */
+    height: 100%;
+  }
+}

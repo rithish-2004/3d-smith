@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { Link as RouterLink } from 'react-router-dom'; // Import Link from react-router-dom for page navigation
+import { Link as ScrollLink } from 'react-scroll'; // Import Link from react-scroll for smooth scrolling
 import './Navbar.css';
 import logo from './images/logo.png'; // Import the logo image
 
@@ -10,24 +11,24 @@ const Navbar = () => {
      <nav className={`navbar ${open ? 'open' : ''}`}>
        <div className="logo-container">
          {/* Use the logo image */}
-         <a href="#">
-           <img src={logo} alt="Logo" className="logo" />
-         </a>
+       
+           <img src={logo} alt="Logo" className="logo11" />
+      
        </div>
        <div className="hamburger" onClick={() => setOpen(!open)}>☰</div>
        <ul className={`menu ${open ? 'open' : ''}`}>
          {/* Smooth scroll to sections */}
          <li>
-           <Link to="about" smooth={true} duration={500}>About</Link>
+           <ScrollLink to="about" smooth={true} duration={500}>About</ScrollLink>
          </li>
          <li>
-           <Link to="services" smooth={true} duration={500}>Services</Link>
+           <ScrollLink to="services" smooth={true} duration={500}>Services</ScrollLink>
          </li>
          <li>
-           <Link to="contact" smooth={true} duration={500}>Contact</Link>
+           <ScrollLink to="contact" smooth={true} duration={500}>Contact</ScrollLink>
          </li>
-         <li><a href="/login">Log In</a></li>
-         <li><a href="/signin">Sign In</a></li>
+         <li><RouterLink to="/login">Log In</RouterLink></li>
+         <li><RouterLink to="/signin">Register</RouterLink></li>
        </ul>
      </nav>
    );

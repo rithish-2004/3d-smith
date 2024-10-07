@@ -1,0 +1,127 @@
+/* Registerpage.css */
+.register-page {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+/* Adjust the carousel container */
+.carousel-container {
+  flex: 1;
+  padding: 5%;
+}
+
+/* Form container styles */
+.form-container {
+  flex: 0 0 40%;
+  padding: 5%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Adjust spacing after logo for the title */
+.form-title {
+  color: #fff;
+  margin-top: 30px; /* Adds spacing after the logo */
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Form group spacing and input field styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ff0057, #7400b8);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Divider for Google register */
+.register-with {
+  color: #fff;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* Google login button styling */
+.google-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.google-icon {
+  margin-right: 8px;
+}
+
+/* Logo positioning and clarity */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  z-index: 10; /* Ensures the logo is visible above other elements */
+  filter: none; /* Ensures no blur filter is applied */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    display: none;
+  }
+  .form-container {
+    flex: 1;
+  }
+ .logo{
+  width: 50px;
+  height: auto;
+ }
+  /* Adjust margin for title in smaller screens */
+  .form-title {
+    margin-top: 50px; /* Less margin on smaller screens */
+  }
+}
+
+.register-prompt {
+  margin-top: 25px; /* Add some space above the prompt */
+  font-size: 16px; /* Set the font size */
+  color: #fff; /* Text color, change as needed */
+  text-align: center; /* Center the text */
+}
+
+.register-link {
+  color: #00ffff; /* Neon color for the link */
+  font-weight: bold; /* Make the link bold */
+  text-decoration: underline; /* Underline the link */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.register-link:hover {
+  color: #ff00ff; /* Change color on hover */
+}
