@@ -125,3 +125,20 @@ input {
 .register-link:hover {
   color: #ff00ff; /* Change color on hover */
 }
+.error-message {
+  color: rgb(219, 70, 70); /* Default error color */
+  font-size: 0.875rem; /* Smaller font size for error messages */
+  margin-top: 0.25rem; /* Space above the error message */
+}
+
+/* Neon effect for successful password message */
+.success-message {
+  color: #00ff00; /* Neon green color */
+  font-size: 0.875rem; /* Smaller font size */
+  margin-top: 0.25rem; /* Space above the success message */
+  text-shadow: 
+    0 0 5px #00ff00, 
+    0 0 10px #00ff00, 
+    0 0 20px #00ff00,
+    0 0 30px #00ff00; /* Neon glow effect */
+}
